@@ -38,7 +38,18 @@ io.on('connection',(socket)=>{
 })
 //middleware setup
 app.use(express.json({limit:"4mb"}));
-app.use(cors());
+import cors from "cors";
+
+app.use(
+  cors({
+    origin: [
+      "https://chat-app-backend-zeta-bice.vercel.app/", // ✅ your Vercel frontend domain
+      "http://localhost:5173",                 // ✅ keep for local dev
+    ],
+    credentials: true,
+  })
+);
+
 
 
 
