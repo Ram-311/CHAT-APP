@@ -43,7 +43,7 @@ app.use(express.json({limit:"4mb"}));
 app.use(
   cors({
     origin: [
-      "https://chat-app-six-ashen-31.vercel.app/login", // ✅ your Vercel frontend domain
+      "https://chat-app-six-ashen-31.vercel.app", // ✅ your Vercel frontend domain
       "http://localhost:5173",                 // ✅ keep for local dev
     ],
     credentials: true,
